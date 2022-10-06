@@ -14,7 +14,7 @@ x altrimenti lascio il prezzo invariato
 
 */
 
-let kmPercorso = parseInt(prompt('quanti km dei percorrere?'));
+let kmPercorso = parseInt(prompt('quanti km devi percorrere?'));
 let eta = parseInt(prompt('quanti anni hai?'));
 console.log(kmPercorso, eta);
 
