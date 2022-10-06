@@ -21,6 +21,8 @@ console.log(kmPercorso, eta);
 let prezzoBiglietto = kmPercorso * 0.21;
 console.log(prezzoBiglietto);
 
+
+
 if (isNaN(kmPercorso) || isNaN(eta)) {
     alert('inserisci solo numeri grazie');
 }
@@ -41,15 +43,18 @@ if (isNaN(prezzoBiglietto)) {
     
     myH2.innerHTML = `
     
-    il prezzo del biglietto è incalcolabile, aggiorna la pagina o schiaccia f5 e inserisci i numeri tipo(1,2,3,4)e non ('uno,due,tre') grazie, ok? ce la puoi fare! 
+    <span>il prezzo del biglietto è incalcolabile, aggiorna la pagina o schiaccia f5 e inserisci caratteri numerici tipo(1,2,3,4...) e non ('uno,due,tre..') grazie, ok? ce la puoi fare!</span> 
     
     `
+    document.body.style.backgroundImage = "url('../terminator.jpg')" ;
+    document.body.style.backgroundSize = "cover" ;
 }else {
     myH2.innerHTML = `
     
-    il prezzo del biglietto è ${prezzoBiglietto} €
+    Il prezzo del biglietto è di: ${prezzoBiglietto} €
     
-    `
+    `;
+    
 }
 
 
