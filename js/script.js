@@ -43,17 +43,23 @@ if (isNaN(prezzoBiglietto)) {
     
     myH2.innerHTML = `
     
-    <span>il prezzo del biglietto è incalcolabile, aggiorna la pagina o schiaccia f5 e inserisci caratteri numerici tipo(1,2,3,4...) e non ('uno,due,tre..') grazie, ok? ce la puoi fare!</span> 
+    <span>il prezzo del biglietto è incalcolabile, aggiorna la pagina o schiaccia f5 e inserisci caratteri numerici tipo(1,2,3,4...) e non ('uno,due,tre..') grazie, ok? ce la puoi fare! se no ti vengo a cercare</span> 
+    
     
     `
+    myH2.style.width = '600px';
+    document.querySelector('h1').innerHTML = "FATALITY ERROR";
     document.body.style.backgroundImage = "url('../terminator.jpg')" ;
     document.body.style.backgroundSize = "cover" ;
+
+
 }else {
     myH2.innerHTML = `
     
     Il prezzo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €
     
     `;
+    document.getElementById("MyElement").classList.remove('d-none');
     
 }
 
