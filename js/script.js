@@ -20,7 +20,7 @@ console.log(kmPercorso, eta);
 
 let prezzoBiglietto = kmPercorso * 0.21;
 console.log(prezzoBiglietto);
-
+let totale;
 
 
 if (isNaN(kmPercorso) || isNaN(eta)) {
@@ -51,7 +51,7 @@ if (isNaN(prezzoBiglietto)) {
 }else {
     myH2.innerHTML = `
     
-    Il prezzo del biglietto è di: ${prezzoBiglietto} €
+    Il prezzo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €
     
     `;
     
