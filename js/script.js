@@ -17,25 +17,32 @@ const prezzoKm = 0.21;
 let kmPercorso = parseInt(prompt('quanti km devi percorrere?'));
 let eta = parseInt(prompt('quanti anni hai?'));
 console.log(kmPercorso, eta);
+let totale = 0;
+console.log(typeof totale);
+let sconto;
 
 let prezzoBiglietto = kmPercorso * prezzoKm;
 console.log(prezzoBiglietto);
-let totale;
 
+const maggiorenne = 18;
+console.log(typeof maggiorenne);
+const anziano = 65;
 
 if (isNaN(kmPercorso) || isNaN(eta)) {
     alert('inserisci solo numeri grazie');
 }
 
-if (eta < 18) {
-
-    prezzoBiglietto = prezzoBiglietto * 0.8; 
+if (eta < maggiorenne) {
+    totale = prezzoBiglietto * 0.8;
+    sconto = '20%'; 
     //alternativa --> prezzoBiglietto - prezzoBiglietto * 20 / 100;
-}else if (eta > 65) {
-    prezzoBiglietto = prezzoBiglietto * 0.6;
+}else if (eta > anziano) {
+    totale = prezzoBiglietto * 0.6;
+    sconto = '40%';
 }
 
-console.log(prezzoBiglietto.toFixed(2));
+console.log('il prezzo è di ' + prezzoBiglietto.toFixed(2));
+console.log(typeof prezzoBiglietto);
 
 let myH2 = document.getElementsByClassName('prezzo-biglietto')[0];
 
@@ -53,14 +60,48 @@ if (isNaN(prezzoBiglietto)) {
     document.body.style.backgroundSize = "cover" ;
 
 
-}else {
+}
+// else if ((isNaN(!prezzoBiglietto)) && ((age <= 65) &&  (age >=18))) {
+//     myH2.innerHTML = `
+    
+//     Il prezzo del biglietto è di: ${totale.toFixed(2)} €
+    
+//     `;
+//     document.getElementById("MyElement").classList.remove('d-none');
+    
+
+// }
+
+else {
+    if ( eta < 18) {
+    console.log(totale);
+
     myH2.innerHTML = `
     
     Il prezzo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €
+    ma siccome hai ${eta} anni hai diritto a uno sconto del ${sconto}
+    quindi il totale è ${totale.toFixed(2)} €
     
     `;
     document.getElementById("MyElement").classList.remove('d-none');
+    }
+    else if ( eta > 65) {
+    console.log(totale);
+
+    myH2.innerHTML = `
     
+    Il prezzo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €
+    ma siccome hai ${eta} anni hai diritto a uno sconto del ${sconto}
+    quindi il totale è ${totale.toFixed(2)} €
+    
+    `;
+    document.getElementById("MyElement").classList.remove('d-none');
+    } else {
+        myH2.innerHTML = `
+        Il prezzo del biglietto è di: ${prezzoBiglietto.toFixed(2)}
+        `
+        document.getElementById("MyElement").classList.remove('d-none');
+    }
 }
 
 
