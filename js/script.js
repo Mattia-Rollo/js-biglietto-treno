@@ -13,12 +13,12 @@ x    applico lo sconto del 40%;
 x altrimenti lascio il prezzo invariato
 
 */
-
+const prezzoKm = 0.21;
 let kmPercorso = parseInt(prompt('quanti km devi percorrere?'));
 let eta = parseInt(prompt('quanti anni hai?'));
 console.log(kmPercorso, eta);
 
-let prezzoBiglietto = kmPercorso * 0.21;
+let prezzoBiglietto = kmPercorso * prezzoKm;
 console.log(prezzoBiglietto);
 let totale;
 
@@ -48,7 +48,7 @@ if (isNaN(prezzoBiglietto)) {
     
     `
     myH2.style.width = '600px';
-    document.querySelector('h1').innerHTML = "FATALITY ERROR";
+    document.querySelector('h1').innerHTML = '<span class="">FATAL ERROR </span>';
     document.body.style.backgroundImage = "url('../terminator.jpg')" ;
     document.body.style.backgroundSize = "cover" ;
 
