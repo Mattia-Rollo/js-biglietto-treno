@@ -41,7 +41,7 @@ if (isNaN(prezzoBiglietto)) {
     
     myH2.innerHTML = `
     
-    il prezzo del biglietto è incalcolabile, metti solo numeri
+    il prezzo del biglietto è incalcolabile, aggiorna la pagina o schiaccia f5 e metti solo numeri grazie, ok? ce la puoi fare! 
     
     `
 }else {
