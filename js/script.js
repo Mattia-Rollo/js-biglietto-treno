@@ -29,18 +29,20 @@ let sconto;
 let maggiorenne = 18;
 console.log(typeof maggiorenne);
 let anziano = 65;
+let scontoUnder18 = 20 / 100;
+let scontoOver65 = 40 / 100;
 
 if (isNaN(kmPercorso) || isNaN(eta)) {
     alert('inserisci solo numeri grazie');
 }
 
 if (eta < maggiorenne) {
-    totale = prezzoBiglietto * 0.8;
+    totale = prezzoBiglietto * scontoUnder18;
     console.log(typeof totale);
     sconto = '20%'; 
     //alternativa --> prezzoBiglietto - prezzoBiglietto * 20 / 100;
 }else if (eta > anziano) {
-    totale = prezzoBiglietto * 0.6;
+    totale = prezzoBiglietto * scontoOver65;
     sconto = '40%';
     console.log(typeof totale);
 }
