@@ -68,7 +68,7 @@ if (isNaN(prezzoBiglietto)) {
 
 }
 else {
-    if ( eta < 18) {
+    if (( eta < 18) || ( eta > 65)) {
     console.log(totale);
 
     myH2.innerHTML = `
@@ -79,18 +79,7 @@ else {
     
     `;
     document.getElementById("MyElement").classList.remove('d-none');
-    }
-    else if ( eta > 65) {
-    console.log(totale);
-
-    myH2.innerHTML = `
     
-    Il prezzo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €
-    ma siccome hai ${eta} anni hai diritto a uno sconto del ${sconto}
-    quindi il totale è di: ${totale.toFixed(2)} €
-    
-    `;
-    document.getElementById("MyElement").classList.remove('d-none');
     } else {
         myH2.innerHTML = `
         Il prezzo del biglietto è di: ${prezzoBiglietto.toFixed(2)} €
