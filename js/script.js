@@ -13,9 +13,9 @@ x    applico lo sconto del 40%;
 x altrimenti lascio il prezzo invariato
 
 */
-let prezzoKm = 0.21;
-let kmPercorso = parseInt(prompt('quanti km devi percorrere?'));
-let eta = parseInt(prompt('quanti anni hai?'));
+const prezzoKm = 0.21;
+const kmPercorso = parseInt(prompt('quanti km devi percorrere?'));
+const eta = parseInt(prompt('quanti anni hai?'));
 console.log(kmPercorso, eta);
 
 
