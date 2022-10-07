@@ -37,11 +37,11 @@ if (isNaN(kmPercorso) || isNaN(eta)) {
 }
 
 if (eta < maggiorenne) {
-    totale = prezzoBiglietto * scontoUnder18;
+    totale = prezzoBiglietto - scontoUnder18;
     console.log(typeof totale);
     sconto = '20%'; 
 }else if (eta > anziano) {
-    totale = prezzoBiglietto * scontoOver65;
+    totale = prezzoBiglietto - scontoOver65;
     sconto = '40%';
     console.log(typeof totale);
 }
