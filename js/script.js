@@ -36,11 +36,11 @@ if (isNaN(kmPercorso) || isNaN(eta)) {
     alert('inserisci solo numeri grazie');
 }
 
-if (eta < maggiorenne) {
-    totale = prezzoBiglietto - scontoUnder18;
+if (eta <= maggiorenne) {
+    totale = prezzoBiglietto - scontoUnder18; 
     console.log(typeof totale);
     sconto = '20%'; 
-}else if (eta > anziano) {
+}else if (eta >= anziano) {
     totale = prezzoBiglietto - scontoOver65;
     sconto = '40%';
     console.log(typeof totale);
@@ -51,25 +51,20 @@ console.log(typeof prezzoBiglietto);
 
 let myH2 = document.getElementsByClassName('prezzo-biglietto')[0];
 
-if (isNaN(prezzoBiglietto)) {
+if (isNaN(prezzoBiglietto) || isNaN(eta)) {
     
     myH2.innerHTML = `
     
     <span>il prezzo del biglietto è incalcolabile, aggiorna la pagina o schiaccia f5 e inserisci caratteri numerici tipo(1,2,3,4...) e non ('uno,due,tre..') grazie, ok? ce la puoi fare! se no ti vengo a cercare</span> 
     
-    
     `
 
-
-    myH2.style.width = '600px';
     document.querySelector('h1').innerHTML = '<span class="">FATAL ERROR </span>';
     document.body.style.backgroundImage = "url('../terminator.jpg')" ;
     document.body.style.backgroundSize = "cover" ;
-
-
 }
 else {
-    if (( eta < 18) || ( eta > 65)) {
+    if (( eta <= 18) || ( eta >= 65)) {
     console.log(totale);
 
     myH2.innerHTML = `
